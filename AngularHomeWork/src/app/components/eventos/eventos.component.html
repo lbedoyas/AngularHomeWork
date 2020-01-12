@@ -1,0 +1,34 @@
+<label> Usuario
+<input type="text">
+</label>
+<br>
+<label for="">Password
+  <input type="password">
+</label>
+<br>
+<button (dblclick)="ingresar()">Iniciar</button>
+<br>
+<br>
+<h1>Ejemplo de model change</h1>
+<br>
+<small>Siempre un ngModelchange debe estar acompañado de un ngModel</small>
+<br>
+<input type="text" (ngModelChange) = "escribirModelo()" [(ngModel)]="changeAlgo">
+{{changeAlgo}}
+<br>
+<br>
+<input type="text" (input)="escribir($event)">
+<br>
+<br>
+<label for="">Focus
+<input type="text" (focus)="colorearFondo($event)">
+</label>
+<br>
+<br>
+<label for="">KeyUp
+<input type="text" (keydown)="ingresar($event)">
+</label>
+<br>
+<br>
+<h4>mouse enter</h4>
+<img [src] = "imagen" (mouseenter)="cambiarTamano($event)">
