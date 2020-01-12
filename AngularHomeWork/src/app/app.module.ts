@@ -7,13 +7,17 @@ import { TitulosComponent } from './components/titulos/titulos.component';
 import { FormsModule } from '@angular/forms';
 import { EventosComponent } from './components/eventos/eventos.component';
 import { DirectivasComponent } from './components/directivas/directivas.component';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { ContinuaraPipe } from './Pipes/continuara.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitulosComponent,
     EventosComponent,
-    DirectivasComponent
+    DirectivasComponent,
+    PipesComponent,
+    ContinuaraPipe
   ],
   imports: [
     BrowserModule,
