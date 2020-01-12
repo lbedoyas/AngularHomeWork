@@ -1,0 +1,35 @@
+<p>directivas works!</p>
+<div class="carga" *ngIf="!cargando">
+  <p>termino de cargar</p>
+</div>
+<img *ngIf="cargando" [src]="imagen" alt="">
+<br>
+<br>
+<button (click)="mostrarCargando()">Mostrar cargando</button>
+
+<br>
+<br>
+<div *ngFor="let nombre of nombres">
+  <p>hola mi nombre es: {{nombre}}</p>
+</div>
+
+<br>
+<br>
+<div class="tab" [ngSwitch]="pestana">
+  <button (click)="cambiarPerstana('Perfil')">Perfil</button>
+  <button (click)="cambiarPerstana('Puntos')">Puntos</button>
+  <button (click)="cambiarPerstana('Info')">Info</button>
+  <div class="contenido">
+    <p *ngSwitchCase="'Perfil'">este es el perfil</p>
+    <p *ngSwitchCase="'Puntos'">estos son los puntos</p>
+    <p *ngSwitchCase="'Info'">esta es la info</p>
+    <p *ngSwitchDefault>seleccione una pestaña</p>
+  </div>
+</div>
+<br>
+<br>
+<button (click)="alternarFondo()">Alternar</button>
+<div [ngClass]="{'cuadrado': mostrarCuadrado}">
+  <p>este debera aparecer con un fondo verde</p>
+</div>
+
